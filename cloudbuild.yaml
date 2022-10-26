@@ -1,0 +1,10 @@
+steps:
+  - name: "gcr.io/cloud-builders/docker"
+    entrypoint: "/bin/bash"
+    args:
+      - "-c"
+      - |
+        make build TAG=us-docker.pkg.dev/$PROJECT_ID/feature-flags-service/feature-flags-service:latest
+
+images:
+  - us-docker.pkg.dev/$PROJECT_ID/feature-flags-service/feature-flags-service:latest

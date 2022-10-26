@@ -24,7 +24,7 @@ func featureFlagsHandler(w http.ResponseWriter, r *http.Request) {
 		flags.MyFlag = false
 	}
 
-	if strings.HasPrefix(region, "us") {
+	if strings.HasPrefix(region, "au") {
 		flags.MyFlag = false
 	}
 

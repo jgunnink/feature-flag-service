@@ -1,3 +1,3 @@
-module github.com/B-Communications/feature-flags-service
+module github.com/jgunnink/feature-flag-service
 
-go 1.18
+go 1.19

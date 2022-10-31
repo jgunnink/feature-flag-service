@@ -1,7 +1,7 @@
 package main
 
 import (
-	"io/ioutil"
+	"io"
 	"log"
 	"net/http"
 	"regexp"
@@ -20,7 +20,7 @@ func getRegion() string {
 	if err == nil {
 		defer res.Body.Close()
 		if res.StatusCode == 200 {
-			responseBody, err := ioutil.ReadAll(res.Body)
+			responseBody, err := io.ReadAll(res.Body)
 			if err != nil {
 				log.Fatal(err)
 			}
@@ -35,7 +35,7 @@ func getRegion() string {
 		if err == nil {
 			defer res.Body.Close()
 			if res.StatusCode == 200 {
-				responseBody, err := ioutil.ReadAll(res.Body)
+				responseBody, err := io.ReadAll(res.Body)
 				if err != nil {
 					log.Fatal(err)
 				}
